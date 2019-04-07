@@ -9,7 +9,14 @@
   font-style: normal;
 }
 
-$icon-facebook: "\EA01";
+$icon-arrow-down: "\EA01";
+$icon-arrow-filled: "\EA02";
+$icon-arrow-left: "\EA03";
+$icon-arrow-right-2: "\EA04";
+$icon-arrow-right: "\EA05";
+$icon-bell: "\EA06";
+$icon-checked: "\EA07";
+$icon-more: "\EA08";
 
 
 %icon {
@@ -28,4 +35,11 @@ $icon-facebook: "\EA01";
   display: inline-block;
 }
 
-.icon-facebook:before { content: $icon-facebook; }
+.icon-arrow-down:before { content: $icon-arrow-down; }
+.icon-arrow-filled:before { content: $icon-arrow-filled; }
+.icon-arrow-left:before { content: $icon-arrow-left; }
+.icon-arrow-right-2:before { content: $icon-arrow-right-2; }
+.icon-arrow-right:before { content: $icon-arrow-right; }
+.icon-bell:before { content: $icon-bell; }
+.icon-checked:before { content: $icon-checked; }
+.icon-more:before { content: $icon-more; }

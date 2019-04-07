@@ -1,1 +1,328 @@
 .admin-home
+  display: flex
+  background: rgb(244, 245, 249)
+  &__content
+    flex: 1
+    margin-left: 70px
+    padding-bottom: 30px
+    +r(767)
+      margin-left: 45px
+  &__header
+    box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
+    background-color: $white
+    padding: 28px 0
+    width: 100%
+    +r(767)
+      padding: 15px 0
+    &__powered
+      +center-y
+      +r(767)
+        justify-content: center
+      strong
+        font-size: 20px
+        font-weight: bold
+        color: $mango
+        margin-right: 12px
+      p
+        font-size: 12px
+        font-weight: 600
+        color: $dark
+    &__info
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      flex-wrap: wrap
+      +r(767)
+        flex-direction: column
+    &__time
+      p
+        font-size: 12px
+        font-weight: normal
+        color: rgba(41, 49, 52, 0.8)
+        margin-right: 40px
+        +r(767)
+          margin-right: 0
+          margin-top: 20px
+    ul
+      position: absolute
+      top: 40px
+      left: calc(50% - 9px)
+      transform: translate(-50%)
+      border-radius: 4px
+      border: solid 0 $black
+      background-color: $charcoal-grey
+      padding: 6px 0
+      width: 150px
+      display: none
+      &:before
+        content: ''
+        border: 10px solid transparent
+        border-bottom: 10px solid $charcoal-grey
+        position: absolute
+        left: 50%
+        top: -19px
+        transform: translate(-50%)
+      li
+        padding: 0
+        &:before
+          display: none
+      a
+        padding: 6px 10px
+        font-size: 12px
+        font-weight: 600
+        display: block
+        color: $pale-grey
+        &:hover
+          background: $charcoal-grey-two
+    &__notifications
+      +center
+      margin-right: 25px
+      position: relative
+      +r(767)
+        margin: 10px 0
+      a
+        position: relative
+        display: block
+      i
+        font-size: 22px
+        color: $charcoal-grey
+      b
+        font-size: 11px
+        font-weight: bold
+        color: $strawberry
+        margin-left: 6px
+      span
+        width: 8px
+        height: 8px
+        background-color: $strawberry
+        border-radius: 100%
+        display: block
+        position: absolute
+        right: 1px
+        top: 2px
+    &__user
+      position: relative
+      a
+        font-size: 12px
+        font-weight: 600
+        color: $dark
+        i
+          font-size: 8px
+          margin-left: 8px
+      ul
+        width: 80px
+        top: 35px
+        left: calc(50% + 15px)
+        +r(1300)
+          left: 50%
+          &:before
+            left: 85%
+        +r(767)
+          left: calc(50% + 15px)
+          &:before
+            left: 69%
+        &:before
+          left: 69%
+  &__title
+    display: flex
+    align-items: flex-end
+    margin-bottom: 12px
+    padding-top: 35px
+    +r(767)
+      flex-direction: column
+      align-items: flex-start
+    h1
+      font-size: 30px
+      font-weight: 300
+      color: $dark
+      margin-right: 10px
+    p
+      font-size: 12px
+      color: rgba(19, 28, 46, 0.6)
+      padding-bottom: 5px
+  &__indication
+    padding-top: 30px
+    padding-bottom: 20px
+    &__block
+      border-radius: 10px
+      box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
+      background-color: $white
+      padding: 50px 27px 25px
+      display: flex
+      justify-content: space-between
+      position: relative
+      margin-bottom: 15px
+      +r(1200)
+        padding: 50px 14px 25px
+      h2
+        font-size: 18px
+        font-weight: bold
+        color: $dark
+        margin-bottom: 15px
+        position: absolute
+        left: 27px
+        top: 25px
+        +r(1200)
+          left: 14px
+        b
+          color: $purpley-pink
+      h3
+        font-size: 50px
+        font-weight: bold
+        color: $charcoal-grey
+        margin-bottom: 30px
+        display: flex
+        span
+          font-size: 18px
+          font-weight: bold
+          text-transform: uppercase
+          color: $charcoal-grey
+          margin-left: 10px
+          display: flex
+          align-items: flex-end
+          padding-bottom: 8px
+        b
+          font-size: 18px
+          font-weight: bold
+          color: $charcoal-grey
+          vertical-align: top
+          display: inline-block
+          padding-top: 10px
+          padding-right: 4px
+      p
+        font-size: 12px
+        font-weight: 600
+        color: $dark
+        margin-bottom: 7px
+        span
+          color: $dark-sky-blue
+      strong
+        font-size: 25px
+        font-weight: bold
+        color: $charcoal-grey
+        span
+          text-transform: uppercase
+          font-size: 12px
+          font-weight: bold
+          color: $charcoal-grey
+          margin-left: 5px
+      &__interest
+        +center-column
+        align-items: center
+        i
+          border-radius: 100%
+          width: 46px
+          height: 46px
+          +center
+          font-size: 16px
+          margin-bottom: 10px
+        span
+          font-size: 20px
+          font-weight: bold
+        &.rise
+          i
+            border: solid 0.5px rgba(48, 191, 114, 0.55)
+            background-color: $ice
+            color: $leafy-green
+            transform: rotate(135deg)
+          span
+            color: $leafy-green
+        &.drop
+          i
+            border: solid 0.5px rgba(241, 43, 44, 0.55)
+            background-color: $very-light-pink-two
+            color: $strawberry
+            transform: rotate(-45deg)
+          span
+            color: $strawberry
+  &__process
+    border-radius: 10px
+    box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
+    background-color: $white
+    overflow: hidden
+    &__status
+      height: 8px
+      background-color: $very-light-pink
+      span
+        display: block
+        background-image: linear-gradient(to left, $leafy-green, $apple)
+        height: 100%
+        width: 33.333333%
+    &__title
+      +center-y
+      align-items: flex-end
+      padding: 30px
+      +r(1024)
+        padding: 20px 15px
+      +r(767)
+        flex-direction: column
+        align-items: flex-start
+        padding: 20px 10px
+      h2
+        font-size: 18px
+        font-weight: bold
+        color: $dark
+        margin-right: 10px
+      span
+        font-size: 12px
+        color: rgba(19, 28, 46, 0.6)
+    &__block
+      display: flex
+      padding: 0 27px 70px
+      position: relative
+      +r(1024)
+        padding: 0 15px 50px
+      +r(767)
+        padding-bottom: 60px
+        justify-content: center
+        padding: 0 10px 50px
+      &--checked
+        h3
+          color: $leafy-green !important
+        .admin-home__process__block__img
+          border-color: $leafy-green
+      &:after
+        content: $icon-arrow-right-2
+        font-family: "iconfont"
+        font-size: 50px
+        color: $light-blue-grey
+        position: relative
+        left: 0
+        width: 30px
+        +r(1024)
+          left: 5%
+        +r(767)
+          left: 50%
+          transform: translate(-50%) rotate(90deg)
+          position: absolute
+          bottom: 10px
+          font-size: 45px
+      &--last
+        &:after
+          display: none
+      &__img
+        width: 46px
+        height: 46px
+        border: 2px solid $light-blue-grey
+        border-radius: 100%
+        margin-right: 15px
+        +center
+        +r(1024)
+          margin-right: 8px
+        img
+          width: 21px
+      &__text
+        flex: 1   
+        +r(767)
+          flex: none
+          width: auto
+        h3
+          font-size: 18px
+          font-weight: bold
+          color: rgba(52, 53, 54, 0.6)
+          margin-bottom: 10px
+        p, span
+          font-size: 12px
+          color: rgba(19, 28, 46, 0.6)
+          display: block
+

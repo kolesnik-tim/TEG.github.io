@@ -1,7 +1,161 @@
 ---
-title: All pages
+title: Admin Home
 ---
 extends layouts/_layout
 block content
   .admin-home
-    
+    aside.aside
+      a(href="index.html").aside__logo
+        img(src="img/logo.png", alt="")
+      ul.aside__menu
+        li
+          a(href="#")
+            img(src="img/home.png", alt="")
+          ul
+            li
+              a(href="#") Home 
+        li
+          a(href="#")
+            img(src="img/dashboard.png", alt="") 
+        li
+          a(href="#")
+            img(src="img/cube.png", alt="")
+            i.icon.icon-more
+          ul
+            li
+              a(href="#") Executive 
+            li
+              a(href="#") Manager 
+            li
+              a(href="#") Analysts 
+        li
+          a(href="#")
+            img(src="img/support.png", alt="")
+    .admin-home__content
+      .admin-home__header
+        .container
+          .row
+            .col-sm-4.col-xs-12
+              .admin-home__header__powered
+                strong CPG
+                p Powered by TEG
+            .col-sm-8.col-xs-12
+              .admin-home__header__info
+                .admin-home__header__time
+                  p Thursday, 28 March 2019  10:47 am (IST)
+                .admin-home__header__notifications
+                  a(href="#").dropdown-open
+                    i.icon.icon-bell
+                    span
+                  b 23
+                  ul
+                    li
+                      a(href="#") Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    li
+                      a(href="#") Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                .admin-home__header__user
+                  a(href="#").dropdown-open Vaishakh
+                    i.icon.icon-arrow-down
+                  ul
+                    li
+                      a(href="#") Exit
+      .container
+        .admin-home__title
+          h1 Home
+          p (Dahboard Last updated 28th Mar, Thu 2019 9:20 PM)
+        .breadcrumbs
+          a(href="#") Home
+        .admin-home__indication
+          .row
+            .col-md-3.col-sm-6.col-xs-12
+              .admin-home__indication__block
+                .admin-home__indication__block__info
+                  h2 Volume - 
+                    b Q1
+                  h3 32.8
+                    span M
+                  p 2018 - 
+                    span Q4
+                  strong 26.3
+                    span M
+                .admin-home__indication__block__interest.rise
+                  i.icon.icon-arrow-filled
+                  span 12.4%
+            .col-md-3.col-sm-6.col-xs-12
+              .admin-home__indication__block
+                .admin-home__indication__block__info
+                  h2 Spend - 
+                    b Q1
+                  h3 
+                    b $
+                    | 8.4
+                    span M
+                  p 2018 - 
+                    span Q4
+                  strong 9.2
+                    span M
+                .admin-home__indication__block__interest.drop
+                  i.icon.icon-arrow-filled
+                  span 12.4%
+            .col-md-3.col-sm-6.col-xs-12
+              .admin-home__indication__block
+                .admin-home__indication__block__info
+                  h2 Efficiency - 
+                    b Q1
+                  h3 98.8
+                    span M
+                  p 2018 - 
+                    span Q4
+                  strong 80.7
+                    span M
+                .admin-home__indication__block__interest.rise
+                  i.icon.icon-arrow-filled
+                  span 12.4%
+            .col-md-3.col-sm-6.col-xs-12
+              .admin-home__indication__block
+                .admin-home__indication__block__info
+                  h2 Incremental Sales - 
+                    b Q1
+                  h3 
+                    b $
+                    | 16.9
+                    span M
+                  p 2018 - 
+                    span Q4
+                  strong 13.5
+                    span M
+                .admin-home__indication__block__interest.rise
+                  i.icon.icon-arrow-filled
+                  span 12.4%
+        .admin-home__process
+          .admin-home__process__status
+            span
+          .admin-home__process__title
+            h2 Process Update
+            span Last updated 28th Mar, Thu 2019 9:20 PM
+          .row
+            .col-sm-4.col-xs-12
+              .admin-home__process__block.admin-home__process__block--checked
+                .admin-home__process__block__img
+                  img(src="img/file.png", alt="")
+                .admin-home__process__block__text
+                  h3 File Upload
+                  p Last updated
+                  span 28th Mar, Thu 2019 9:20 PM
+            .col-sm-4.col-xs-12
+              .admin-home__process__block
+                .admin-home__process__block__img
+                  img(src="img/file.png", alt="")
+                .admin-home__process__block__text
+                  h3 ETL
+                  p Last updated
+                  span 28th Mar, Thu 2019 9:20 PM
+            .col-sm-4.col-xs-12
+              .admin-home__process__block.admin-home__process__block--last
+                .admin-home__process__block__img
+                  img(src="img/file.png", alt="")
+                .admin-home__process__block__text
+                  h3 Dashboard
+                  p Last updated
+                  span 28th Mar, Thu 2019 9:20 PM
+

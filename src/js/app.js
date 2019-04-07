@@ -1,5 +1,5 @@
 import './import/ui';
-import './import/swiper';
+import './import/admin-home';
 // import objectFitImages from 'object-fit-images';
 
 
