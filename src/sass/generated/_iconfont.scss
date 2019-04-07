@@ -11,12 +11,15 @@
 
 $icon-arrow-down: "\EA01";
 $icon-arrow-filled: "\EA02";
-$icon-arrow-left: "\EA03";
-$icon-arrow-right-2: "\EA04";
-$icon-arrow-right: "\EA05";
-$icon-bell: "\EA06";
-$icon-checked: "\EA07";
-$icon-more: "\EA08";
+$icon-arrow-left-circle: "\EA03";
+$icon-arrow-left: "\EA04";
+$icon-arrow-right-2: "\EA05";
+$icon-arrow-right-circle: "\EA06";
+$icon-arrow-right: "\EA07";
+$icon-bell: "\EA08";
+$icon-checked: "\EA09";
+$icon-error: "\EA0A";
+$icon-more: "\EA0B";
 
 
 %icon {
@@ -37,9 +40,12 @@ $icon-more: "\EA08";
 
 .icon-arrow-down:before { content: $icon-arrow-down; }
 .icon-arrow-filled:before { content: $icon-arrow-filled; }
+.icon-arrow-left-circle:before { content: $icon-arrow-left-circle; }
 .icon-arrow-left:before { content: $icon-arrow-left; }
 .icon-arrow-right-2:before { content: $icon-arrow-right-2; }
+.icon-arrow-right-circle:before { content: $icon-arrow-right-circle; }
 .icon-arrow-right:before { content: $icon-arrow-right; }
 .icon-bell:before { content: $icon-bell; }
 .icon-checked:before { content: $icon-checked; }
+.icon-error:before { content: $icon-error; }
 .icon-more:before { content: $icon-more; }

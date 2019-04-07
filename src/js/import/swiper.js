@@ -1,17 +1,13 @@
-// import Swiper from 'swiper';
+import Swiper from 'swiper';
 
 
-// //home
-// var swiper = new Swiper('.swiper-shares', {
-//   slidesPerView: 2,
+//admin-file_upload
+// var swiper = new Swiper('.swiper-admin-file', {
+//   slidesPerView: 4,
 //   spaceBetween: 30,
 //   navigation: {
-//     nextEl: '.swiper-shares-next',
-//     prevEl: '.swiper-shares-prev',
-//   },
-//   pagination: {
-//     el: '.swiper-pagination-shares',
-//     clickable: true,
+//     nextEl: '.swiper-admin-file-next',
+//     prevEl: '.swiper-admin-file-prev',
 //   },
 //   breakpoints: {
 //     1024: {
@@ -20,3 +16,21 @@
 //     }
 //   }
 // });
+
+
+
+var galleryThumbs = new Swiper('.swiper-admin-file', {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.swiper-admin-file-next',
+    prevEl: '.swiper-admin-file-prev',
+  },
+});
+var galleryTop = new Swiper('.gallery-top-admin-file_upload', {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  thumbs: {
+    swiper: galleryThumbs
+  }
+});

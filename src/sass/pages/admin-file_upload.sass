@@ -1,0 +1,64 @@
+.admin-file_upload
+  display: flex
+  background: rgb(244, 245, 249)
+  min-height: 100vh
+  &__slider
+    .swiper-slide-thumb-active
+      .admin-file_upload__slider__block
+        box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
+        border-color: $mango
+        background-color: $very-light-pink-six
+    &__block
+      border-radius: 10px
+      box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
+      background-color: $white
+      display: flex
+      padding: 23px
+      border: solid 1px transparent
+      +tr
+      &__img
+        width: 46px
+        height: 46px
+        border-radius: 100%
+        border: 2px solid $light-blue-grey
+        +center
+        margin-right: 15px
+        img
+          width: 21px
+      &__text
+        flex: 1
+        h2
+          font-size: 18px
+          font-weight: bold
+          color: $charcoal-grey
+          display: flex
+          align-items: flex-start
+          position: relative
+          padding-right: 30px
+          padding-bottom: 8px
+          img
+            width: 18px
+            padding-top: 1px
+            margin-left: 10px
+          span
+            position: absolute
+            right: 0
+            font-size: 12px
+            font-weight: 600
+            color: rgba(19, 28, 46, 0.6)
+        strong
+          font-size: 12px
+          font-weight: 600
+          color: $dark
+          padding-bottom: 8px
+          display: block
+        p
+          font-size: 12px
+          color: rgba(19, 28, 46, 0.6)
+          span
+            display: block
+      &__btn
+        display: flex
+        padding-top: 15px
+        .btn-primary
+          margin-right: 10px
