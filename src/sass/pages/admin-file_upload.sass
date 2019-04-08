@@ -2,6 +2,10 @@
   display: flex
   background: rgb(244, 245, 249)
   min-height: 100vh
+  .admin-home__content
+    width: calc(100% - 70px)
+    +r(767)
+      width: calc(100% - 45px)
   &__slider
     .swiper-slide-thumb-active
       .admin-file_upload__slider__block
@@ -13,9 +17,11 @@
       box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
       background-color: $white
       display: flex
-      padding: 23px
+      padding: 21px
       border: solid 1px transparent
       +tr
+      +r(767)
+        padding: 11px
       &__img
         width: 46px
         height: 46px
@@ -23,10 +29,15 @@
         border: 2px solid $light-blue-grey
         +center
         margin-right: 15px
+        +r(767)
+          margin-right: 8px
+          width: 40px
+          height: 40px
         img
           width: 21px
       &__text
         flex: 1
+        width: 155px
         h2
           font-size: 18px
           font-weight: bold
@@ -60,5 +71,287 @@
       &__btn
         display: flex
         padding-top: 15px
+        a
+          font-size: 11px
         .btn-primary
           margin-right: 10px
+    .gallery-top
+      padding: 50px 5px 5px
+      &__slide
+        h2
+          font-size: 25px
+          font-weight: normal
+          color: $dark
+          display: flex
+          margin-bottom: 20px
+          span
+            font-size: 12px
+            font-weight: 600
+            color: rgba(19, 28, 46, 0.6)
+            margin-left: 6px
+        &__warning
+          border-radius: 10px
+          border: solid 0.5px $orangey-red
+          background-color: $light-pink
+          padding: 12px 15px
+          p
+            font-size: 14px
+            font-weight: 600
+            color: $strawberry
+            +center
+            justify-content: flex-start
+            i
+              font-size: 20px
+              margin-right: 10px
+        &__table
+          width: 100%
+          overflow: auto
+          border-radius: 10px
+          box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
+          background-color: $white
+          margin-top: 20px
+          &__title
+            display: flex
+            align-items: center
+            padding: 30px
+            flex-wrap: wrap
+            +r(767)
+              padding: 15px
+            h3
+              font-size: 18px
+              font-weight: bold
+              color: $charcoal-grey
+              margin-right: 25px
+          table
+            min-width: 740px
+            width: 100%
+            display: block
+          thead, tbody, tfoot, tr
+            width: 100%
+            display: block
+          tr
+            display: flex
+            border-top: 1px solid $very-light-pink-five
+          th, td
+            width: 25%
+            display: block
+            text-align: left
+            border-right: 1px solid $very-light-pink-five
+            padding: 20px 35px
+            font-size: 14px
+            font-weight: normal
+            color: $dark-grey
+            +r(970)
+              padding: 10px 15px
+            &:last-child
+              border-right: none
+            &.error-red
+              background-color: $light-peach
+              color: $strawberry
+              font-weight: 600
+              +center-y
+              i
+                font-size: 20px
+                margin-right: 10px
+            &.error-yellow
+              background-color: $pale
+              color: $mango
+              font-weight: 600
+              +center-y
+              i
+                font-size: 20px
+                margin-right: 10px
+          tfoot
+            strong
+              font-size: 12px
+              font-weight: bold
+              color: $dark
+              margin-bottom: 13px
+              display: block
+              text-transform: uppercase
+            h4
+              font-size: 14px
+              font-weight: normal
+              color: $dark
+              margin-bottom: 13px
+              b
+                font-weight: bold
+            span
+              font-size: 14px
+              font-weight: normal
+              color: $mango
+              margin-bottom: 13px
+              display: block
+              b
+                font-weight: bold
+            p
+              font-size: 14px
+              font-weight: normal
+              color: $orangey-red
+              b
+                font-weight: bold
+  &__btn
+    margin-top: 40px
+    display: flex
+    justify-content: flex-end
+    +r(767)
+      margin-top: 20px
+    a
+      margin-left: 9px
+      color: rgba(19, 28, 46, 0.4)
+      font-size: 14px
+      +r(767)
+        padding: 8px 15px
+  &__log
+    position: fixed
+    right: -100%
+    top: 0
+    max-width: 715px
+    width: 100%
+    height: 100vh
+    z-index: 12
+    background-color: $very-light-pink-three
+    box-shadow: -1.5px 2px 16px 0 rgba(2, 23, 56, 0.19)
+    transition: all 0.8s
+    &.is-active
+      right: 0
+    &--bg
+      position: fixed
+      left: 0
+      top: 0
+      display: none
+      width: 100%
+      height: 100%
+      background: rgba(0, 0, 0, 0.7)
+      z-index: 11
+    &__title
+      padding: 30px 40px
+      padding-right: 15px
+      background: $white
+      display: flex
+      align-items: center
+      justify-content: space-between
+      border-bottom: 1px solid rgba($charcoal-grey, 0.15)
+      +r(767)
+        padding: 10px 15px
+        flex-direction: column
+      &__text
+        display: flex
+        align-items: center
+        +r(767)
+          flex-direction: column
+      a
+        font-size: 25px
+        font-weight: 600
+        color: $charcoal-grey
+        &:hover
+          color: $mango
+        i
+          color: $mango
+          font-size: 20px
+          margin-right: 34px
+          position: relative
+          bottom: -2px
+      p
+        font-size: 18px
+        font-weight: normal
+        color: $charcoal-grey
+        margin-left: 20px
+        +r(767)
+          margin-left: 0
+          margin-top: 15px
+      .admin-file_upload__log__select
+      .selectize-input
+        width: 80px
+        border-bottom: none
+        +r(767)
+          +center
+          display: flex !important
+      .selectize-input:after
+        display: none !important
+    &__table
+      height: calc(100vh - 96px)
+      overflow: auto
+      padding-bottom: 30px
+      table
+        min-width: 740px
+        width: 100%
+        display: block
+      thead, tbody, tfoot, tr
+        width: 100%
+        display: block
+      tr
+        display: flex
+        align-items: center
+        border-bottom: 1px solid rgba($charcoal-grey, 0.15)
+        +tr
+        &.is-active
+          background: $ice-blue
+      td
+        display: block
+        padding: 25px 0
+        +r(767)
+          padding: 15px 0
+        input
+          display: none
+          &:checked + label:before
+            border-color: $bright-light-blue
+            background: $bright-light-blue
+            color: $white
+        label
+          cursor: pointer
+          &:before
+            content: $icon-checked
+            font-family: "iconfont"
+            border: solid 1px #767676
+            border-radius: 3px
+            width: 16px
+            height: 16px
+            font-size: 10px
+            color: transparent
+            +tr
+            +center
+        strong
+          font-size: 14px
+          font-weight: bold
+          color: $charcoal-grey
+        b
+          font-size: 12px
+          font-weight: 600
+          color: $dark
+          padding-bottom: 8px
+          display: block
+        p
+          font-size: 12px
+          color: rgba(19, 28, 46, 0.6)
+        span
+          font-size: 14px
+          font-weight: normal
+          color: $mango
+          padding-left: 30px
+        a
+          font-size: 12px
+          font-weight: bold
+          color: $bright-light-blue
+          &:hover
+            text-decoration: underline
+        &:first-child
+          width: 75px
+          display: flex
+          justify-content: flex-end
+          padding-right: 17px
+        &:nth-child(2)
+          width: 30px
+        &:nth-child(3)
+          width: 80px
+        &:nth-child(4)
+          width: 40px
+          img
+            width: 16px
+        &:nth-child(5)
+          max-width: 225px
+        &:nth-child(6)
+          width: 170px
+        &:last-child
+          width: 100px
+
