@@ -1,0 +1,86 @@
+.aside
+  width: 70px
+  height: 100vh
+  box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
+  background-color: $charcoal-grey
+  +center-column
+  justify-content: flex-start
+  padding: 20px 0
+  position: fixed
+  left: 0
+  top: 0
+  z-index: 10
+  +r(767)
+    width: 45px
+  img
+    width: 30px
+    +r(767)
+      width: 22px
+  &__logo
+    padding-bottom: 40px
+  &__menu
+    +center-column
+    li
+      position: relative
+      padding: 15px 20px
+      +tr
+      +r(767)
+        padding: 15px 10px
+      &:before
+        content: ''
+        position: absolute
+        width: 30px
+        height: 100%
+        right: -30px
+        top: 0
+      &:hover
+        background: rgba(#000, 0.2)
+        ul
+          visibility: visible
+          opacity: 1
+        i
+          color: $white
+      ul
+        visibility: hidden
+        opacity: 0
+        +tr
+        position: absolute
+        left: 80px
+        top: 10px
+        border-radius: 4px
+        border: solid 0 $black
+        background-color: $charcoal-grey
+        padding: 6px 0
+        +r(767)
+          left: 60px
+        &:before
+          content: ''
+          border: 10px solid transparent
+          border-right: 10px solid $charcoal-grey
+          position: absolute
+          left: -17px
+          top: 9px
+        li
+          padding: 0
+          &:before
+            display: none
+        a
+          padding: 6px 20px
+          font-size: 12px
+          font-weight: 600
+          color: $pale-grey
+          &:hover
+            background: $charcoal-grey-two
+
+    a
+      display: flex
+      align-items: center
+      position: relative
+      i
+        position: absolute
+        right: -17px
+        color: $blue-grey
+        font-size: 14px
+        +tr
+        +r(767)
+          right: -14px

@@ -19,3 +19,33 @@
       &:after
         right: 0
         transform: rotate(-45deg)
+
+.blocker
+  z-index: 15
+  padding: 0
+.modal a.close-modal
+  display: none !important
+.pop-up
+  &__exit
+    padding: 25px 30px
+    border-radius: 10px
+    background-color: $white
+    max-width: 400px
+    h3
+      font-size: 18px
+      font-weight: bold
+      color: $charcoal-grey
+      margin-bottom: 10px
+    p
+      font-size: 14px
+      font-weight: normal
+      color: $charcoal-grey
+      display: block
+      padding-bottom: 35px
+    &__btn
+      display: flex
+      justify-content: flex-end
+      a
+        margin-left: 10px
+        width: 77px
+        +center

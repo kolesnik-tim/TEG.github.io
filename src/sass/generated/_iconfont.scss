@@ -17,9 +17,14 @@ $icon-arrow-right-2: "\EA05";
 $icon-arrow-right-circle: "\EA06";
 $icon-arrow-right: "\EA07";
 $icon-bell: "\EA08";
-$icon-checked: "\EA09";
-$icon-error: "\EA0A";
-$icon-more: "\EA0B";
+$icon-checked-1: "\EA09";
+$icon-checked: "\EA0A";
+$icon-error: "\EA0B";
+$icon-feedback: "\EA0C";
+$icon-logout: "\EA0D";
+$icon-more: "\EA0E";
+$icon-settings: "\EA0F";
+$icon-upadte: "\EA10";
 
 
 %icon {
@@ -46,6 +51,11 @@ $icon-more: "\EA0B";
 .icon-arrow-right-circle:before { content: $icon-arrow-right-circle; }
 .icon-arrow-right:before { content: $icon-arrow-right; }
 .icon-bell:before { content: $icon-bell; }
+.icon-checked-1:before { content: $icon-checked-1; }
 .icon-checked:before { content: $icon-checked; }
 .icon-error:before { content: $icon-error; }
+.icon-feedback:before { content: $icon-feedback; }
+.icon-logout:before { content: $icon-logout; }
 .icon-more:before { content: $icon-more; }
+.icon-settings:before { content: $icon-settings; }
+.icon-upadte:before { content: $icon-upadte; }

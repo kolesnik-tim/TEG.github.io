@@ -13,7 +13,7 @@ $('.admin-file_upload__log--open').on('click', function() {
 
 
 //admin-file_upload__log close
-$('.admin-file_upload__log__title__text a, .admin-file_upload__log--bg').on('click', function() {
+$('.pop-up__exit__btn--exit').on('click', function() {
   $('.admin-file_upload__log').removeClass('is-active');
   $('.admin-file_upload__log--bg').fadeOut();
 });

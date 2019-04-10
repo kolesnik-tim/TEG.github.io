@@ -4,61 +4,9 @@ title: Admin Home
 extends layouts/_layout
 block content
   .admin-file_upload
-    aside.aside
-      a(href="index.html").aside__logo
-        img(src="img/logo.png", alt="")
-      ul.aside__menu
-        li
-          a(href="#")
-            img(src="img/home.png", alt="")
-          ul
-            li
-              a(href="#") Home 
-        li
-          a(href="#")
-            img(src="img/dashboard.png", alt="") 
-        li
-          a(href="#")
-            img(src="img/cube.png", alt="")
-            i.icon.icon-more
-          ul
-            li
-              a(href="#") Executive 
-            li
-              a(href="#") Manager 
-            li
-              a(href="#") Analysts 
-        li
-          a(href="#")
-            img(src="img/support.png", alt="")
+    include ./pages-layouts/_aside
     .admin-home__content
-      .admin-home__header
-        .container
-          .row
-            .col-sm-4.col-xs-12
-              .admin-home__header__powered
-                strong CPG
-                p Powered by TEG
-            .col-sm-8.col-xs-12
-              .admin-home__header__info
-                .admin-home__header__time
-                  p Thursday, 28 March 2019  10:47 am (IST)
-                .admin-home__header__notifications
-                  a(href="#").dropdown-open
-                    i.icon.icon-bell
-                    span
-                  b 23
-                  ul
-                    li
-                      a(href="#") Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    li
-                      a(href="#") Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                .admin-home__header__user
-                  a(href="#").dropdown-open Vaishakh
-                    i.icon.icon-arrow-down
-                  ul
-                    li
-                      a(href="#") Exit
+      include ./pages-layouts/_header
       .container
         .admin-home__title
           h1 File Upload
@@ -499,12 +447,12 @@ block content
           a(href="#").btn.btn-primary Cancel
           a(href="#").btn.btn-primary Add
           a(href="#").btn.btn-primary Submit
-    .admin-file_upload__log--bg
+    a(href="#pop-up__exit" rel="modal:open").admin-file_upload__log--bg
     .admin-file_upload__log
       .admin-file_upload__log__content
         .admin-file_upload__log__title
           .admin-file_upload__log__title__text
-            a(href="#")
+            a(href="#pop-up__exit" rel="modal:open")
               i.icon.icon-arrow-left
               | Log - File 01
             p Business-overview.xls

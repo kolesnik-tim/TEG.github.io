@@ -1,4 +1,9 @@
 //BEGIN pop-up
-.bg
-.pop-up
+.pop-up.pop-up__exit.modal#pop-up__exit
+  h3 Are you sure?
+  p Are you sure that you want to perform this action?
+  .pop-up__exit__btn
+    a(href="#" rel="modal:close").btn.btn-primary No
+    a(href="#" rel="modal:close").btn.btn-secondary.pop-up__exit__btn--exit Yes
+
 //END pop-up
