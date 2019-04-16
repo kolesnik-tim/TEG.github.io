@@ -1,0 +1,147 @@
+.login
+  background-image: linear-gradient(to bottom, $pale-two, $very-light-pink-seven)
+  min-height: 100vh
+  +center
+  padding: 20px 0
+  &__content
+    +center
+    +r(767)
+      flex-direction: column
+  &__form
+    +center-column
+    max-width: 450px
+    width: 100%
+    margin-right: 45px
+    +r(767)
+      margin-right: 0
+      margin-bottom: 50px
+    &__block
+      border-radius: 10px
+      box-shadow: 0px 3.5px 20px 0 rgba(0, 0, 0, 0.06)
+      background-color: $white
+      padding: 45px 50px
+      +center-column
+      width: 100%
+      +r(500)
+        padding: 20px 15px
+      img
+        width: 52px
+        margin-bottom: 25px
+      h1
+        font-size: 30px
+        font-weight: normal
+        color: $dark-grey
+        margin-bottom: 55px
+    &__input
+      width: 100%
+      position: relative
+      margin-bottom: 25px
+      input
+        width: 100%
+        border-bottom: 1px solid rgba($very-light-pink-five, 0.5)
+        padding: 10px 0 
+        font-size: 14px
+        font-weight: normal
+        color: $dark-grey
+        &:valid + label
+          opacity: 0
+        &:focus + label
+          opacity: 0
+      label
+        font-size: 14px
+        font-weight: normal
+        color: $dark-grey
+        position: absolute
+        left: 0
+        top: 10px
+        display: flex
+        +tr
+        &:after
+          content: ''
+          position: relative
+          top: 4px
+          width: 6px
+          height: 6px
+          display: block
+          border-radius: 100%
+          background-color: $orangey-red-two
+          margin-left: 5px
+    &__checkbox
+      display: flex
+      justify-content: space-between
+      align-items: center
+      width: 100%
+      margin-bottom: 30px
+      a
+        font-size: 12px
+        font-weight: normal
+        color: $dark-grey
+        &:hover
+          color: $mango
+      input
+        display: none
+        &:checked + label:before
+          color: $white
+          background: $mango
+          border-color: $mango
+      label
+        font-size: 12px
+        font-weight: normal
+        color: $dark-grey
+        display: flex
+        align-items: center
+        +tr
+        &:hover
+          color: $mango
+        &:before
+          content: $icon-checked
+          font-family: "iconfont"
+          font-size: 10px
+          color: transparent
+          width: 16px
+          height: 16px
+          +center
+          border-radius: 3px
+          margin-right: 10px
+          +tr
+          border: 1px solid rgba($very-light-pink-five, 0.5)
+    input[type="submit"]
+      position: relative
+      left: -50%
+      transform: translate(50%)
+      font-size: 14px
+      padding: 13px 30px
+      border-radius: 25px
+      display: inline-flex
+    p
+      font-size: 12px
+      font-weight: 600
+      color: $dark
+      margin-top: 35px
+  &__new
+    max-width: 200px
+    width: 100%
+    h2
+      font-size: 16px
+      font-weight: bold
+      color: $dark-grey
+      padding-bottom: 15px
+      border-bottom: 1px dashed $black
+      text-transform: uppercase
+    &__block
+      padding-top: 20px
+      &__title
+        +center
+        justify-content: flex-start
+        margin-bottom: 13px
+        h3
+          font-size: 14px
+          font-weight: 600
+          color: $dark-grey
+        img
+          width: 28px
+          margin-right: 10px
+      p
+        font-size: 12px
+        font-weight: normal
+        color: $dark-grey

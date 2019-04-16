@@ -1,0 +1,36 @@
+---
+title: Login
+---
+extends layouts/_layout
+block content
+  .login
+    .container
+      .login__content
+        .login__form
+          form.login__form__block
+            img(src="img/logo-black.png", alt="")
+            h1 Sign in to CPG
+            .login__form__input
+              input(type="text" name="username" id="username" required)
+              label(for="username") Username
+            .login__form__input
+              input(type="password" name="password" id="password" required)
+              label(for="password") Password
+            .login__form__checkbox
+              input(type="checkbox" name="checkbox" id="checkbox" checked)
+              label(for="checkbox") Remember me?
+              a(href="#") Forgot Password?
+            input(type="submit" value="Sign in").btn.btn-secondary
+          p Powered by TEG
+        .login__new
+          h2 What’s new
+          .login__new__block
+            .login__new__block__title
+              img(src="img/app.png", alt="")
+              h3 In-App Notification
+            p Deliver rich contextual messages for better conversion.
+          .login__new__block
+            .login__new__block__title
+              img(src="img/location.png", alt="")
+              h3 Geofence Notification
+            p Location & periphery based smart alerts
