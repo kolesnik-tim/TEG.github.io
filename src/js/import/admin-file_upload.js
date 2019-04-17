@@ -1,7 +1,7 @@
 
 
 //select page
-$('.gallery-top__slide__table__title__select').selectize();
+$('.gallery-top__slide__title__select').selectize();
 
 
 //admin-file_upload__log
