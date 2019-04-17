@@ -23,6 +23,8 @@ var galleryThumbs = new Swiper('.swiper-admin-file', {
   slidesPerView: 4,
   spaceBetween: 30,
   shortSwipes: false,
+  preventInteractionOnTransition: true,
+  slidesPerGroup: 1,
   navigation: {
     nextEl: '.swiper-admin-file-next',
     prevEl: '.swiper-admin-file-prev',
