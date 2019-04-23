@@ -18,6 +18,8 @@ $('.aside').hover(function() {
   $(this).addClass('active');
 }, function() {
   $(this).removeClass('active');
+  $('.aside__menu__item--drop-down').removeClass('active');
+  $('.aside__menu__item--drop-down').siblings('ul').slideUp();
 });
 $('.aside__menu__item--drop-down').on('click', function() {
   $(this).toggleClass('active');
