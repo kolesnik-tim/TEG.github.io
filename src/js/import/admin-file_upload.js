@@ -4,6 +4,7 @@
 $('.gallery-top__slide__title__select').selectize();
 
 
+
 //admin-file_upload__log
 //admin-file_upload__log open
 $('.admin-file_upload__log--open').on('click', function() {

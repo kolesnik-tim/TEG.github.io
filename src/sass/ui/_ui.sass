@@ -32,7 +32,8 @@ textarea
 
 
 
-
+.selectize-input.full
+  background: none
 .selectize-input
   border: none
   border-bottom: 1px solid rgba($very-light-pink-five, 0.5)
@@ -64,6 +65,7 @@ textarea
   border-radius: 19px
   font-size: 12px
   +tr
+  display: inline-flex
   &-primary
     border: 1px solid $light-blue-grey
     padding: 10px 22px
@@ -103,6 +105,8 @@ textarea
       color: $dark
     &:last-child
       color: $dark
+      &:after
+        display: none
 
 
 

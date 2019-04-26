@@ -25,6 +25,7 @@ $icon-logout: "\EA0D";
 $icon-more: "\EA0E";
 $icon-settings: "\EA0F";
 $icon-upadte: "\EA10";
+$icon-warning: "\EA11";
 
 
 %icon {
@@ -59,3 +60,4 @@ $icon-upadte: "\EA10";
 .icon-more:before { content: $icon-more; }
 .icon-settings:before { content: $icon-settings; }
 .icon-upadte:before { content: $icon-upadte; }
+.icon-warning:before { content: $icon-warning; }
