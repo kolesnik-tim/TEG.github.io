@@ -23,9 +23,10 @@ $icon-error: "\EA0B";
 $icon-feedback: "\EA0C";
 $icon-logout: "\EA0D";
 $icon-more: "\EA0E";
-$icon-settings: "\EA0F";
-$icon-upadte: "\EA10";
-$icon-warning: "\EA11";
+$icon-plus: "\EA0F";
+$icon-settings: "\EA10";
+$icon-upadte: "\EA11";
+$icon-warning: "\EA12";
 
 
 %icon {
@@ -58,6 +59,7 @@ $icon-warning: "\EA11";
 .icon-feedback:before { content: $icon-feedback; }
 .icon-logout:before { content: $icon-logout; }
 .icon-more:before { content: $icon-more; }
+.icon-plus:before { content: $icon-plus; }
 .icon-settings:before { content: $icon-settings; }
 .icon-upadte:before { content: $icon-upadte; }
 .icon-warning:before { content: $icon-warning; }
