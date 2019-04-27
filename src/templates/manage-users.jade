@@ -3,21 +3,21 @@ title: Manage User
 ---
 extends layouts/_layout
 block content
-  .manage-user
+  .admin-home.manage-user
     include ./pages-layouts/_aside
-    .manage__content
+    .admin-home__content
       include ./pages-layouts/_header
       .container
         .admin-home__title
-          h1 Home
+          h1 Manage Users
           a(href="#").btn.btn-secondary 
             i.icon.icon-plus
             | Create User
         .breadcrumbs
           a(href="#") Home
           a(href="#") Manage Users
-        .manage__table.manage-user__table
-          .manage__table__content
+        .manage-user__table
+          .manage-user__table__content
             table.table
               thead
                 tr
@@ -28,15 +28,19 @@ block content
                   th 
                     a(href="#")
                       i.icon.icon-search
-                    input(type="text" name="username" placeholder="username")
+                    input(type="text" name="first-name" placeholder="first name")
                   th 
                     a(href="#")
                       i.icon.icon-search
-                    input(type="text" name="display-name" placeholder="display name")
+                    input(type="text" name="last-name" placeholder="last name")
                   th 
                     a(href="#")
                       i.icon.icon-search
-                    input(type="email" name="email" placeholder="email")
+                    input(type="email" name="username" placeholder="username")
+                  th 
+                    a(href="#")
+                      i.icon.icon-search
+                    input(type="tel" name="phone" placeholder="phone")
                   th.table__drop-down.drop-down--open
                     span Role
                     a(href="#")
@@ -49,6 +53,10 @@ block content
                       li
                         a(href="#") Accountant
                   th
+                    span status
+                    a(href="#")
+                      i.icon.icon-sort-arrows
+                  th
               tbody
                 tr
                   td 
@@ -56,12 +64,18 @@ block content
                   td 
                     p Vaishakh
                   td 
-                    p Vaishakh Pilatholi
+                    p Pilatholi
                   td 
                     a(href="mailto:vpilatholi@gmail.com") 
                       p vpilatholi@gmail.com
+                  td
+                    a(href="tel:8861389038") 
+                      p 8861389038
                   td 
-                    p Super Admin
+                    p Manager
+                  td
+                    input(type="checkbox" id="status-1")
+                    label(for="status-1")
                   td.table__drop-down.drop-down--open
                     a(href="#").table__more
                       i.icon.icon-more
@@ -71,7 +85,7 @@ block content
                           i.icon.icon-edit
                           | Edit
                       li
-                        a(href="#") 
+                        a(href="#")
                           i.icon.icon-delete
                           | Delete
                 tr
@@ -80,12 +94,18 @@ block content
                   td 
                     p Vaishakh
                   td 
-                    p Vaishakh Pilatholi
+                    p Pilatholi
                   td 
                     a(href="mailto:vpilatholi@gmail.com") 
                       p vpilatholi@gmail.com
+                  td
+                    a(href="tel:8861389038") 
+                      p 8861389038
                   td 
                     p Super Admin
+                  td
+                    input(type="checkbox" id="status-2")
+                    label(for="status-2") 
                   td.table__drop-down.drop-down--open
                     a(href="#").table__more
                       i.icon.icon-more
@@ -104,12 +124,18 @@ block content
                   td 
                     p Vaishakh
                   td 
-                    p Vaishakh Pilatholi
+                    p Pilatholi
                   td 
                     a(href="mailto:vpilatholi@gmail.com") 
                       p vpilatholi@gmail.com
+                  td
+                    a(href="tel:8861389038") 
+                      p 8861389038
                   td 
                     p Super Admin
+                  td
+                    input(type="checkbox" id="status-3")
+                    label(for="status-3") 
                   td.table__drop-down.drop-down--open
                     a(href="#").table__more
                       i.icon.icon-more
@@ -128,12 +154,18 @@ block content
                   td 
                     p Vaishakh
                   td 
-                    p Vaishakh Pilatholi
+                    p Pilatholi
                   td 
                     a(href="mailto:vpilatholi@gmail.com") 
                       p vpilatholi@gmail.com
+                  td
+                    a(href="tel:8861389038") 
+                      p 8861389038
                   td 
                     p Super Admin
+                  td
+                    input(type="checkbox" id="status-4")
+                    label(for="status-4") 
                   td.table__drop-down.drop-down--open
                     a(href="#").table__more
                       i.icon.icon-more
@@ -152,12 +184,18 @@ block content
                   td 
                     p Vaishakh
                   td 
-                    p Vaishakh Pilatholi
+                    p Pilatholi
                   td 
                     a(href="mailto:vpilatholi@gmail.com") 
                       p vpilatholi@gmail.com
+                  td
+                    a(href="tel:8861389038") 
+                      p 8861389038
                   td 
                     p Super Admin
+                  td
+                    input(type="checkbox" id="status-5")
+                    label(for="status-5") 
                   td.table__drop-down.drop-down--open
                     a(href="#").table__more
                       i.icon.icon-more
@@ -170,18 +208,82 @@ block content
                         a(href="#") 
                           i.icon.icon-delete
                           | Delete
+                tr
+                  td 
+                    p 06
+                  td 
+                    p Vaishakh
+                  td 
+                    p Pilatholi
+                  td 
+                    a(href="mailto:vpilatholi@gmail.com") 
+                      p vpilatholi@gmail.com
+                  td
+                    a(href="tel:8861389038") 
+                      p 8861389038
+                  td 
+                    p Super Admin
+                  td
+                    input(type="checkbox" id="status-6")
+                    label(for="status-6") 
+                  td.table__drop-down.drop-down--open
+                    a(href="#").table__more
+                      i.icon.icon-more
+                    ul
+                      li
+                        a(href="#") 
+                          i.icon.icon-edit
+                          | Edit
+                      li
+                        a(href="#") 
+                          i.icon.icon-delete
+                          | Delete
+                tr
+                  td 
+                    p 07
+                  td 
+                    p Vaishakh
+                  td 
+                    p Pilatholi
+                  td 
+                    a(href="mailto:vpilatholi@gmail.com") 
+                      p vpilatholi@gmail.com
+                  td
+                    a(href="tel:8861389038") 
+                      p 8861389038
+                  td 
+                    p Super Admin
+                  td
+                    input(type="checkbox" id="status-7")
+                    label(for="status-7") 
+                  td.table__drop-down.drop-down--open
+                    a(href="#").table__more
+                      i.icon.icon-more
+                    ul
+                      li
+                        a(href="#") 
+                          i.icon.icon-edit
+                          | Edit
+                      li
+                        a(href="#") 
+                          i.icon.icon-delete
+                          | Delete
+                
 
 
 
 
 
 
-    a(href="#warning" rel="modal:open").manage__create--bg
+
+
+    a(href="#").manage__create--bg
     .manage__create.manage-user__create
       .manage__create__header
         a(href="#warning" rel="modal:open")
-          i.icon.icon-angle-pointing
-          | Create User
+          i.icon.icon-arrow-left
+          | Create User - 
+          span 8/25
       form.manage__create__content
         .manage__create__form.manage__form
           .manage__form__title
@@ -190,25 +292,25 @@ block content
               | User Details
             p Mandatory Fields
           .manage__form__input
-            input(type="text" id="display-name" name="display-name" required)
-            label(for="display-name") Display Name
+            input(type="text" id="first-name" name="first-name" required)
+            label(for="first-name") First Name
           .manage__form__input
-            input(type="text" id="username" name="username" required)
-            label(for="username") Username
-          .manage__form__input
-            input(type="password" id="password" name="password" required)
-            label(for="password") Password
+            input(type="text" id="last-name" name="last-name" required)
+            label(for="last-name") Last Name
           .manage__form__input
             input(type="email" id="email" name="email" required)
             label(for="email") Email
+          .manage__form__input
+            input(type="tel" id="phone" name="phone" required)
+            label(for="phone") Phone
           .manage__form__radio
             h3 Select Role
-            input(type="radio" name="role" id="role-1")
-            label(for="role-1") Admin
+            input(type="radio" name="role" id="role-1" checked)
+            label(for="role-1") Analyst
             input(type="radio" name="role" id="role-2")
-            label(for="role-2") Manager
+            label(for="role-2") Admin
             input(type="radio" name="role" id="role-3")
-            label(for="role-3") Accountant
+            label(for="role-3") Executive
         .manage__create__form.manage__form.manage-user__create__form
           .manage__form__title
             h3
@@ -221,39 +323,45 @@ block content
                   p features
                 th
                   input(type="checkbox" id="select-privileges-view")
-                  label(for="select-privileges-view") View
-                th
-                  input(type="checkbox" id="select-privileges-edit")
-                  label(for="select-privileges-edit") Edit
+                  label(for="select-privileges-view")
             tbody 
               tr
                 td 
-                  p Dashboard
+                  p File Upload
                 td
-                  input(type="checkbox" id="select-privileges-1-1" checked).select-privileges-view
-                  label(for="select-privileges-1-1")
-                td
-                  input(type="checkbox" id="select-privileges-2-1" checked).select-privileges-edit
-                  label(for="select-privileges-2-1")
+                  input(type="checkbox" id="select-privileges-1" checked).select-privileges-view
+                  label(for="select-privileges-1")
               tr
                 td 
-                  p Manage Users
+                  p File Approval
                 td
-                  input(type="checkbox" id="select-privileges-1-2").select-privileges-view
-                  label(for="select-privileges-1-2")
-                td
-                  input(type="checkbox" id="select-privileges-2-2").select-privileges-edit
-                  label(for="select-privileges-2-2")
+                  input(type="checkbox" id="select-privileges-2").select-privileges-view
+                  label(for="select-privileges-2")
               tr
                 td 
-                  p Manage Events
+                  p DB  Approval
                 td
-                  input(type="checkbox" id="select-privileges-1-3").select-privileges-view
-                  label(for="select-privileges-1-3")
+                  input(type="checkbox" id="select-privileges-3").select-privileges-view
+                  label(for="select-privileges-3")
+              tr
+                td 
+                  p Publish
                 td
-                  input(type="checkbox" id="select-privileges-2-3").select-privileges-edit
-                  label(for="select-privileges-2-3")
+                  input(type="checkbox" id="select-privileges-4").select-privileges-view
+                  label(for="select-privileges-4")
+              tr
+                td 
+                  p Manual Override
+                td
+                  input(type="checkbox" id="select-privileges-5").select-privileges-view
+                  label(for="select-privileges-5")
+              tr
+                td 
+                  p Add New File Types
+                td
+                  input(type="checkbox" id="select-privileges-6").select-privileges-view
+                  label(for="select-privileges-6")
         .manage__form__footer
-          a(href="#warning" rel="modal:open").btn.btn-primary cancel
-          button(type="submit").btn.btn-primary
+          a(href="#").btn.btn-primary.manage__create__close cancel
+          button(type="submit").btn.btn-secondary
             span create

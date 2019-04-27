@@ -1,35 +1,30 @@
-.manage
-  background: rgb(244, 245, 249)
-  display: flex
-  &__content
-    width: calc(100% - 70px)
-    margin-left: 70px
+.manage-user
+  .admin-home__title
+    display: flex
+    justify-content: space-between
     +r(767)
-      width: calc(100% - 40px)
-      margin-left: 40px
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      flex-wrap: wrap
+      flex-direction: row
+    h1
+      +r(767)
+        margin-top: 10px
+    a
+      width: 156px
+      height: 40px
+      +center
+      font-size: 14px
+      +r(767)
+        margin-top: 10px
+      i
+        margin-right: 12px
+        font-size: 13px
   &__table
     border-radius: 10px
     box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
     background-color: $white
-    margin-bottom: 100px
-    overflow-x: scroll
+    margin-top: 45px
+    +r(1060)
+      overflow-x: scroll
     // &::-webkit-scrollbar-track
     //   background-color: $very-light-pink
     // &::-webkit-scrollbar-thumb
@@ -41,10 +36,8 @@
     +r(767)
       margin-bottom: 30px
     &__content
-      min-width: 1160px
+      min-width: 960px
       display: block
-      // +r(767)
-      //   min-width: 900px
     table, tbody, thead
       width: 100%
       display: block
@@ -60,71 +53,32 @@
       background: none
     tbody tr:last-child
       border-bottom: none
-      ul
-        +r(1260)
-          top: auto
-          bottom: 100px
-          &:before
-            content: ''
-            top: auto
-            bottom: -16px
-            border: 8px solid transparent
-            border-top: 8px solid $white
     td, th
       display: flex
       position: relative
       &:first-child
         width: 5%
       &:nth-child(2)
-        width: 17%
+        width: 12%
       &:nth-child(3)
-        width: 24%
+        width: 14%
       &:nth-child(4)
-        width: 25%
+        width: 22%
       &:nth-child(5)
-        width: 24%
+        width: 16%
+      &:nth-child(6)
+        width: 13%
+      &:nth-child(7)
+        width: 13%
       &:last-child
         width: 5%
-    th
-      ul
-        left: 62px
-        top: 10px
-        width: 120px
-        &:before
-          left: calc(50% - 1px)
-        +r(1250)
-          left: 49px
-          &:before
-            left: calc(50% + 12px)
-        +r(767)
-          left: 28px
-          &:before
-            left: calc(50% + 27px)
-        a
-          &:before
-            display: none
     th
       padding: 25px 9px
       display: flex
       align-items: center
-      ul
-        left: calc(50% + 18px)
-        &:before
-          left: calc(50% + 5px)
-        +r(1250)
-          left: calc(50% + 6px)
-          &:before
-            left: calc(50% + 18px)
-        +r(767)
-          left: calc(50% - 5px)
-          &:before
-            left: calc(50% + 31px)
-      img
-        width: 15px
-      a
-        &:hover
-          i
-            color: $bright-light-blue
+      a:hover
+        i
+          color: #fdae30
       i
         font-size: 12px
         color: $dark
@@ -148,21 +102,74 @@
         padding-left: 8px
         &.is-active
           +placeholder-color(rgba(19, 28, 46, 0.4))
+    td
+      padding: 25px 12px
+      text-align: left
+      position: relative
+      p
+        font-size: 14px
+        font-weight: normal
+        color: $dark
+        +tr
+        +r(767)
+          font-size: 11px
+      a:hover
+        p
+          color: #fdae30
+      input
+        display: none
+        &:checked + label
+          background-color: $leafy-green
+          &:before
+            right: 25px
+      label
+        width: 45px
+        height: 25px
+        border-radius: 12.5px
+        background-color: $very-light-pink-five
+        display: block
+        position: relative
+        &:before
+          content: ''
+          position: absolute
+          right: 5px
+          top: 5px
+          width: 15px
+          height: 15px
+          background-color: $white
+          border-radius: 100%
+          display: block
+          +tr
+    .table__more
+      i
+        font-size: 24px
+        color: $dark
+        +tr
+        transform: rotate(90deg)
+      &:hover
+        i
+          color: #fdae30
+    .table__drop-down
+      ul
+        right: 0
+        left: auto
+        top: 35%
+        &:before
+          left: 81%
+
     ul
       display: none
       position: absolute
-      left: calc(50% - 3px)
-      top: 30%
-      transform: translate(-50%, 50%)
-      width: 105px
+      top: 10%
+      transform: translate(0%, 50%)
       border-radius: 7px
       box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.24)
       background-color: $white
       z-index: 10
-      +r(1250)
-        left: calc(50% - 15px)
+      left: 0px
+      width: 120px
       +r(767)
-        left: calc(50% - 25px)
+        left: -8px
       &:before
         content: ''
         position: absolute
@@ -171,13 +178,13 @@
         background: $white
         width: 10px
         height: 10px
-        top: -6px
+        top: -5px
         box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.24)
         z-index: 3
-        +r(1250)
-          left: calc(50% + 12px)
-        +r(767)
-          left: calc(50% + 27px)
+        // +r(1250)
+        //   left: calc(50% + 12px)
+        // +r(767)
+        //   left: calc(50% + 27px)
       li
         position: relative
         z-index: 5
@@ -214,86 +221,6 @@
           font-size: 9px
           margin-right: 10px
           +tr
-    th.table__drop-down
-      li 
-        a
-          &:before
-            content: ''
-            width: 9px
-            height: 9px
-            background-color: $white
-            border-radius: 100%
-            margin-right: 7px
-        &:last-child
-          a
-            &:before
-              background-color: $strawberry
-    .table__datepicker
-      position: relative
-      input
-        position: absolute
-        left: 0
-        top: 0
-        width: 100%
-        height: 100%
-        opacity: 0
-        cursor: pointer
-    .table__gallery
-      display: flex
-      a
-        margin-right: 5px
-        position: relative
-        +center
-        cursor: default
-        &:nth-child(2)
-          cursor: pointer
-        &:nth-child(n+3)
-          display: none
-        img
-          +r(767)
-            width: 45px
-            height: 45px
-        i
-          position: absolute
-          left: 0
-          top: 0
-          width: 100%
-          height: 100%
-          +center
-          color: $white
-          background: rgba($charcoal-grey, 0.3)
-          font-size: 22px
-          +tr
-        &:hover
-          i
-            color: $bright-light-blue
-            background: rgba($charcoal-grey, 0.5)
-    .table__more
-      i
-        font-size: 24px
-        color: $dark
-        +tr
-      &:hover
-        i
-          color: $bright-light-blue
-    td
-      padding: 25px 12px
-      text-align: left
-      position: relative
-      p
-        font-size: 14px
-        font-weight: normal
-        color: $dark
-        +tr
-        +r(767)
-          font-size: 11px
-      a:hover
-        p
-          color: $bright-light-blue
-    tr.open
-      background-color: #f5fff1
-      p
-        font-weight: 600
 
 
 
@@ -301,6 +228,12 @@
 
 
 
+
+
+
+
+
+.manage
   &__create
     position: fixed
     right: -100%
@@ -335,15 +268,19 @@
         font-weight: 600
         color: $dark
         display: block
+        span
+          font-weight: normal
         &:hover
-          color: $bright-light-blue
+          color: $mango
           i
             color: $dark
         i
           font-size: 19px
-          color: $bright-light-blue
+          color: $mango
           margin-right: 33px
           +tr
+          +r(767)
+            margin-right: 14px
     &__content
       padding: 30px
       overflow: scroll
@@ -395,26 +332,10 @@
           background: $orangey-red
           display: block
           margin-right: 5px
-    &__input, &__description
+    &__input
       width: 100%
       position: relative
       padding-top: 30px
-      .selectize-input
-        box-shadow: none
-        border: none
-        border-bottom: 1px solid #cecece
-        padding: 10px 0 5px
-        border-radius: 0
-        height: 36px
-      .selectize-input::after
-        display: none !important
-        right: 0px !important
-      &.select-gear
-        .selectize-input::after
-          display: block !important
-      .selectize-control.multi .selectize-input.has-items
-        padding: 10px 0 !important
-        height: auto
       input, textarea
         width: 100%
         border-bottom: 1px solid #cecece
@@ -429,12 +350,6 @@
         &:valid
           & + label
             opacity: 0
-      textarea
-        height: 204px
-        border-radius: 10px
-        border: solid 1px #909090
-        background-color: #f2f2f2
-        padding: 20px 30px
       label
         font-size: 14px
         font-weight: normal
@@ -452,185 +367,112 @@
           height: 6px
           background-color: $orangey-red
           border-radius: 100%
-      &.select-country, &.select-state
-        .point
-          position: absolute
-          left: 45px
-          z-index: 9
-          top: 45px
-          width: 6px
-          height: 6px
-          background-color: $orangey-red
-          border-radius: 100%
-      &.select-state
-        .point
-          left: 82px
-    &__description
-      label
-        top: 50px
-        left: 30px
-        bottom: auto
-    &__fee
-      display: flex
-      margin-top: 30px
-      +r(530)
-        flex-direction: column
-      input
-        width: 100%
-        border-bottom: 1px solid #cecece
-        margin-right: 15px
-        padding: 9px 0
+    .manage__form__radio
+      padding-top: 35px
+      h3
         font-size: 14px
-        font-weight: normal
-        color: #616161
-        +r(530)
-          margin-right: 0
-          margin-bottom: 15px
-        &:last-child
-          margin-right: 0
-    &__datepicker
-      display: flex
-      padding-top: 40px
-      flex-wrap: wrap
-      &__block
-        position: relative
-        width: calc(50% - 15px)
-        +r(530)
-          width: 100%
-        &:last-child
-          margin-left: 30px
-          +r(530)
-            margin: 0
-            padding-top: 20px
-      input
-        width: 100%
-        border-bottom: 1px solid #cecece
-        font-size: 14px
-        font-weight: normal
-        color: #616161
-        padding-bottom: 10px
-        background: none
-      label
-        font-size: 14px
-        font-weight: normal
-        color: #616161
-        position: absolute
-        left: 0
-        bottom: 10px
-        +tr
-        &:before
-          content: ''
-          position: absolute
-          right: -10px
-          top: 5px
-          width: 6px
-          height: 6px
-          background-color: $orangey-red
-          border-radius: 100%
-      a
-        position: absolute
-        right: 0
-        width: 20px
-        img
-          width: 100%
-    &__image
-      +center
-      justify-content: space-between
-      margin-top: 40px
-      +r(530)
-        flex-direction: column
-      &__block
-        width: 150px
-        height: 150px
-        position: relative
-        border-radius: 10px
-        border: dashed 1px #a1a1a1
-        overflow: hidden
-        +tr
-        &:hover
-          background: #f2f2f2
-        span.output
-          position: absolute
-          left: 50%
-          top: 50%
-          transform: translate(-50%, -50%)
-          width: 100%
-          height: 100%
-          +center
-          span
-            +center
-          img
-            width: 100%
-        +r(530)
-          margin-bottom: 10px
-        input
-          width: 100%
-          height: 100%
-          position: absolute
-          left: 0
-          top: 0
-          opacity: 0
-          cursor: pointer
-          z-index: 5
-        p
-          width: 100%
-          height: 100%
-          +center
-          background: rgba(0, 0, 0, 0.5)
-          position: relative
-          z-index: 4
-        a
-          +center-column
-          font-size: 14px
-          font-weight: normal
-          color: $white
-          &.delete
-            position: absolute
-            width: 100%
-            height: 100%
-        i
-          width: 28px
-          height: 28px
-          +center
-          background: $orangey-red
-          color: $white
-          font-size: 18px
-          border-radius: 100%
-          margin-bottom: 7px
-        &--add
-          p
-            background: none
-          a
-            color: #616161
-          i
-            background: $bright-light-blue
-            font-size: 15px
-    &__btn
-      display: flex
-      margin-top: 30px
-      a
-        font-size: 12px
         font-weight: 600
+        color: $charcoal-grey
+        padding-bottom: 20px
+      input
+        display: none
+        &:checked + label
+          color: $mango
+          &:before
+            border: 3px solid $mango
+            box-shadow: 0 0 0px 1px $mango
+      label
+        font-size: 14px
+        font-weight: normal
+        color: #616161
+        margin-right: 20px
+        position: relative
         +center
-        &:hover
-          text-decoration: underline
-        i
-          width: 20px
-          height: 20px
+        display: inline-flex
+        +tr
+        +r(500)
+          margin-right: 10px
+        &:before
+          content: ''
+          width: 14px
+          height: 14px
+          opacity: 0.87
+          border: 3px solid transparent
+          box-shadow: 0 0 0px 1px #767676
+          margin-right: 10px
+          display: inline-block
           border-radius: 100%
-          color: $white
+          +tr
+          +r(500)
+            margin-right: 5px
+    .manage__form__table
+      width: calc(100% + 100px)
+      margin-left: -50px
+      margin-top: 20px
+      display: block
+      margin-bottom: -30px
+      +r(767)
+        width: calc(100% + 30px)
+        margin-left: -15px
+        margin-bottom: 0
+      table, tbody, thead
+        width: 100%
+        display: block
+      tr
+        display: flex
+        align-items: center
+        padding: 0 50px
+        +tr
+        width: 100%
+        &:nth-child(2n+1)
+          background: #f2f2f2
+      th
+        p, label
+          +r(767)
+            font-size: 11px
+      thead tr
+        background: none !important
+      td, th
+        display: flex
+        padding: 14px 0
+        &:first-child
+          width: 80%
+        &:last-child
+          width: 20%
+          justify-content: flex-end
+      p, label
+        font-size: 12px
+        font-weight: bold
+        text-transform: uppercase
+        color: $charcoal-grey
+      input
+        display: none
+        &:checked + label
+          &:before
+            background: $mango
+            border-color: $mango
+            color: $white
+      label
+        &:before
+          content: $icon-checked
+          width: 16px
+          height: 16px
+          opacity: 0.87
+          border: solid 1px #767676
+          font-family: "iconfont"
+          color: transparent
           font-size: 10px
           +center
-          margin-right: 8px
-      &__add-more
-        color: #3cc6f2
-        margin-right: 20px
-        i
-          background: #3cc6f2
-      &__delete
-        color: #ed4444
-        i
-          background: #ed4444
+          display: inline-flex
+          margin-right: 9px
+          border-radius: 4px
+          +tr
+      td
+        p
+          font-size: 14px
+          font-weight: normal
+          text-transform: none
+          color: $charcoal-grey
     &__footer
       position: absolute
       bottom: 0
@@ -648,16 +490,17 @@
         color: $dark
         font-size: 12px
         text-transform: uppercase
-        padding-top: 13px
-        &:before, &:after
-          display: none
+        padding-top: 11px
+        width: 103px
+        +center
         &:hover
           color: $white
           background: $dark
       button
         font-size: 12px
         text-transform: uppercase
-  
+        width: 103px
+        +center
   
   
   

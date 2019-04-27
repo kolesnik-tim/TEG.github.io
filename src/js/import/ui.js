@@ -36,3 +36,4 @@ $(document).mouseup(function(e) {
     $('.file-card__btn ul').fadeOut();
   }
 });
+
