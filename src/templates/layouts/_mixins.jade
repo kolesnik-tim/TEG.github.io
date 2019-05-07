@@ -7,3 +7,12 @@ mixin icon(name, modClass)
     - var modClass = ' ' + modClass
   svg(class=name + modClass)
     use(xlink:href= svgSprite + '#' + name)
+
+
+
+
+mixin breadcrumbs(items)
+  .breadcrumbs
+    a(href="admin-home.html") Home
+    each item in items
+      a(href="#")= item

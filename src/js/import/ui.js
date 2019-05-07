@@ -11,8 +11,8 @@ $('[rel="modal:open"]').on('click', function(event) {
 });
 
 
-//process-update select
-$('.process-update__filters__select').selectize();
+//select
+$('select').selectize();
 
 
 //process_update

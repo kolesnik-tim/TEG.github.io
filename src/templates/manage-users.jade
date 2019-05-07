@@ -13,9 +13,7 @@ block content
           a(href="#").btn.btn-secondary 
             i.icon.icon-plus
             | Create User
-        .breadcrumbs
-          a(href="#") Home
-          a(href="#") Manage Users
+        +breadcrumbs(['Manage Users'])
         .manage-user__table
           .manage-user__table__content
             table.table

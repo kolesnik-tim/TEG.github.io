@@ -1,10 +1,3 @@
-
-
-//select page
-$('.gallery-top__slide__title__select').selectize();
-
-
-
 //admin-file_upload__log
 //admin-file_upload__log open
 $('.admin-file_upload__log--open').on('click', function() {
@@ -18,11 +11,6 @@ $('.pop-up__exit__btn--exit').on('click', function() {
   $('.admin-file_upload__log').removeClass('is-active');
   $('.admin-file_upload__log--bg').fadeOut();
 });
-
-
-//select admin-file_upload__log
-$('.admin-file_upload__log__select').selectize();
-
 
 //checkbox
 $('.table__checkbox input').on('click', function() {
